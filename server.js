@@ -48,7 +48,8 @@ io.on('connection', (socket) => {
     } )
 })
 
-const port = process.eventNames.PORT;   
+const port = process.env.PORT;   
+// const port = process.eventNames.PORT;   
 
 server.listen(port, () => {
     console.log('Express server listening on port: ', port);
