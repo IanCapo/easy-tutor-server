@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
     } )
 })
 
-const port = process.eventNames.PORT || 5000;
+const port = process.eventNames.PORT;   
 
 server.listen(port, () => {
     console.log('Express server listening on port: ', port);
