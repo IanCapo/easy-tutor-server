@@ -1,8 +1,13 @@
 const express  = require('express');
-const { eventNames } = require('process');
 const app = express();
 const server = require('http').createServer(app);
-const ioSocket = require('socket.io')(server);
+const ioSocket = require('socket.io')(server, {
+    cors: {
+        origin: '*',
+        methods: ["GET", "POST"],
+        allowedHeaders: ['*']
+      }
+})
 
 app.use('/', express.static('public'));
 
