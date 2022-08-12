@@ -20,7 +20,7 @@ const participantB = {
 }
 
 ioSocket.on("connect_error", (err) => {
-    console.log(`connect_error due to ${err.message}`);
+    console.log(`connect_error due to ${err}`);
   });
   
 
@@ -82,7 +82,7 @@ ioSocket.on('connection', (socket) => {
     } )
 })
 
-const port = process.env.PORT;    
+const port = process.env.PORT;
 
 server.listen(port, () => {
     console.log('Express server listening on port: ', port);
